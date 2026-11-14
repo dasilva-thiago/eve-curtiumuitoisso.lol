@@ -1,2 +1,4 @@
+# Site pessoal. A remoção dos buscadores é feita via X-Robots-Tag/meta noindex;
+# o rastreio fica liberado para que os buscadores consigam ler essa instrução.
 User-agent: *
 Allow: /

@@ -5,6 +5,8 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
   Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Resource-Policy: same-site
+  X-Robots-Tag: noindex, nofollow, noarchive, noimageindex
 
 # Cache: sem regras próprias de propósito. O padrão do Cloudflare
 # (max-age=0, must-revalidate + ETag) faz o navegador revalidar sempre e
