@@ -2,7 +2,7 @@
 // Docs: https://developers.cloudflare.com/workers/static-assets/
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "eve-curtiumuitoisso",
+  "name": "eve-curtiumuitoisso-lol",
   "compatibility_date": "2025-10-01",
   "assets": {
     "directory": "./public",
