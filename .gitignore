@@ -147,3 +147,10 @@ vite.config.ts.timestamp-*
 
 # Turbo Repo
 .turbo
+
+# Cloudflare
+.wrangler/
+.dev.vars*
+
+# Foto original em alta (o site usa eve-avatar.jpg)
+public/assets/img/eve.jpg

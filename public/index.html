@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Eve curtiu isso!</title>
+    <meta name="description" content="Eve curtiu isso! …talvez vc curta também." />
+    <meta name="theme-color" content="#f4ece1" />
+    <meta name="color-scheme" content="light" />
+    <link rel="canonical" href="https://eve-curtiumuitoisso.lol/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://eve-curtiumuitoisso.lol/" />
+    <meta property="og:title" content="Eve curtiu isso!" />
+    <meta property="og:description" content="…talvez vc curta também." />
+    <meta property="og:image" content="https://eve-curtiumuitoisso.lol/assets/img/cafe-1.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,700;1,9..144,900&display=swap"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script type="module" src="assets/js/main.js"></script>
+  </head>
+
+  <body>
+    <!-- Sprite de ícones -->
+    <svg class="sprite" aria-hidden="true" focusable="false">
+      <defs>
+        <linearGradient id="g-brand" x1="0" y1="1" x2="1" y2="0">
+          <stop offset="0" stop-color="#d39a4a" />
+          <stop offset=".5" stop-color="#b5503c" />
+          <stop offset="1" stop-color="#6b2d4a" />
+        </linearGradient>
+      </defs>
+      <symbol id="i-heart" viewBox="0 0 24 24">
+        <path
+          d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.7 4.5c2.2 0 3.6 1.2 5.3 3 1.7-1.8 3.1-3 5.3-3 3.7 0 5.8 3.9 4.3 7.3C19.5 16.4 12 21 12 21z"
+        />
+      </symbol>
+      <symbol id="i-grid" viewBox="0 0 24 24">
+        <path
+          d="M3 3h5v5H3zM9.5 3h5v5h-5zM16 3h5v5h-5zM3 9.5h5v5H3zM9.5 9.5h5v5h-5zM16 9.5h5v5h-5zM3 16h5v5H3zM9.5 16h5v5h-5zM16 16h5v5h-5z"
+        />
+      </symbol>
+      <symbol id="i-music" viewBox="0 0 24 24">
+        <path
+          d="M9 18.5a2.5 2.5 0 1 1-2.5-2.5c.4 0 .8.1 1 .2V5l12-2v12.5a2.5 2.5 0 1 1-2.5-2.5c.4 0 .8.1 1 .2V6.1l-9 1.5z"
+        />
+      </symbol>
+      <symbol id="i-send" viewBox="0 0 24 24">
+        <path
+          d="M22 3 9.2 10.1M22 3l-7 18-5.8-10.9L2 7.5z"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linejoin="round"
+        />
+      </symbol>
+      <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></symbol>
+      <symbol id="i-sparkle" viewBox="0 0 24 24">
+        <path
+          d="M12 0c.8 6.4 5.6 11.2 12 12-6.4.8-11.2 5.6-12 12-.8-6.4-5.6-11.2-12-12C6.4 11.2 11.2 6.4 12 0z"
+        />
+      </symbol>
+      <symbol id="i-close" viewBox="0 0 24 24">
+        <path d="M5 5l14 14M19 5 5 19" fill="none" stroke="currentColor" stroke-width="2" />
+      </symbol>
+      <symbol id="i-chevron" viewBox="0 0 24 24">
+        <path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.4" />
+      </symbol>
+      <symbol id="i-verified" viewBox="0 0 40 40">
+        <path
+          fill="url(#g-brand)"
+          d="M20 3.1 14.6 0l-3 5.2H5.4v6.3L0 14.6 3.1 20 0 25.4l5.4 3.1v5.9h6l3.2 5.6 5.4-3.1 5.4 3.1 3.2-5.6h6.2v-6l5.2-3L36.9 20l3.1-5.4-5.2-3V5.2h-6.5L25.4 0z"
+        />
+        <path fill="#fff" d="m17.2 27.5-6.7-6.7 2.1-2.1 4.6 4.6 10.2-10.2 2.1 2.1z" />
+      </symbol>
+    </svg>
+
+    <div class="sparkles" aria-hidden="true" data-sparkles></div>
+
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="hero">
+      <h1 class="hero__title">Eve curtiu isso!</h1>
+      <p class="hero__sub">…talvez vc curta também.</p>
+    </header>
+
+    <main id="conteudo" class="container">
+      <section class="profile" aria-labelledby="profile-name">
+        <div class="profile__avatar">
+          <span class="note">curtindo tudo</span>
+          <div class="avatar-ring">
+            <img
+              src="assets/img/eve-avatar.jpg"
+              alt="Foto de perfil da Eve"
+              width="150"
+              height="150"
+            />
+          </div>
+        </div>
+
+        <div class="profile__info">
+          <div class="profile__name">
+            <h2 id="profile-name">evyn018</h2>
+            <svg class="icon icon--verified" role="img" aria-label="Verificada">
+              <use href="#i-verified" />
+            </svg>
+          </div>
+          <p class="profile__handle">eVe</p>
+          <ul class="stats">
+            <li><strong data-post-count>24</strong> posts</li>
+            <li><strong>8</strong> obsessões</li>
+            <li><strong>∞</strong> cafés</li>
+          </ul>
+          <p class="bio">
+            Curadoria oficial de coisas boas.<br />
+            BTS · cafés chiques · chocolate · Elis · doramas · MPB · SP
+          </p>
+        </div>
+
+        <div class="profile__actions">
+          <button class="btn btn--primary" type="button" data-action="like-all">
+            <svg class="icon" aria-hidden="true"><use href="#i-heart" /></svg>
+            Curtir tudo
+          </button>
+          <button class="btn" type="button" data-action="goto-tab" data-target="playlist">
+            Ver trilha sonora
+          </button>
+        </div>
+      </section>
+
+      <nav class="highlights" aria-label="Destaques" data-highlights></nav>
+
+      <div class="tabs" role="tablist" aria-label="Conteúdo">
+        <button
+          class="tab"
+          type="button"
+          role="tab"
+          id="tab-feed"
+          aria-controls="feed"
+          aria-selected="true"
+          data-tab="feed"
+        >
+          <svg class="icon" aria-hidden="true"><use href="#i-grid" /></svg>
+          <span class="tab__label">Curtidas</span>
+        </button>
+        <button
+          class="tab"
+          type="button"
+          role="tab"
+          id="tab-playlist"
+          aria-controls="playlist"
+          aria-selected="false"
+          tabindex="-1"
+          data-tab="playlist"
+        >
+          <svg class="icon" aria-hidden="true"><use href="#i-music" /></svg>
+          <span class="tab__label">Trilha sonora</span>
+        </button>
+      </div>
+
+      <div class="panel" id="feed" role="tabpanel" aria-labelledby="tab-feed" data-feed></div>
+      <div class="panel" id="playlist" role="tabpanel" aria-labelledby="tab-playlist" hidden>
+        <ol class="songs" data-songs></ol>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>
+        ·
+        <a href="https://vsco.co/pereiraraeve" target="_blank" rel="noopener noreferrer"
+          >vsco.co/pereiraraeve</a
+        >
+      </p>
+      <details class="credits">
+        <summary>Créditos das fotos</summary>
+        <ul data-credits></ul>
+      </details>
+    </footer>
+
+    <!-- Mensagem -->
+    <button
+      class="dm"
+      type="button"
+      aria-expanded="false"
+      aria-controls="dm-card"
+      data-action="toggle-dm"
+    >
+      <svg class="icon" aria-hidden="true"><use href="#i-send" /></svg>
+      Mensagens
+      <span class="dm__badge" aria-label="1 mensagem não lida">1</span>
+    </button>
+    <aside class="dm-card" id="dm-card" aria-label="Mensagem" hidden>
+      <header class="dm-card__head">
+        <img class="mini-avatar" src="assets/img/suga-avatar.jpg" alt="" width="32" height="32" />
+        <strong>suga</strong>
+        <time class="muted">agora</time>
+      </header>
+      <p class="bubble">obrigado pela consideração eve tmj</p>
+    </aside>
+
+    <!-- Post (modal) -->
+    <dialog class="modal" aria-labelledby="post-author" data-modal>
+      <button class="modal__close" type="button" aria-label="Fechar" data-action="close">
+        <svg class="icon" aria-hidden="true"><use href="#i-close" /></svg>
+      </button>
+      <button
+        class="modal__nav modal__nav--prev"
+        type="button"
+        aria-label="Post anterior"
+        data-action="prev"
+      >
+        <svg class="icon icon--flip" aria-hidden="true"><use href="#i-chevron" /></svg>
+      </button>
+      <button
+        class="modal__nav modal__nav--next"
+        type="button"
+        aria-label="Próximo post"
+        data-action="next"
+      >
+        <svg class="icon" aria-hidden="true"><use href="#i-chevron" /></svg>
+      </button>
+
+      <article class="post">
+        <div class="post__media" data-post-media>
+          <img data-post-img alt="" width="900" height="1125" />
+          <svg class="post__pop" aria-hidden="true" data-post-pop><use href="#i-heart" /></svg>
+        </div>
+        <div class="post__side">
+          <header class="post__head">
+            <img class="mini-avatar" data-post-thumb alt="" width="32" height="32" />
+            <strong id="post-author">evyn018</strong>
+            <span class="muted" data-post-cat></span>
+          </header>
+          <p class="post__caption"><strong>evyn018</strong> <span data-post-caption></span></p>
+          <footer class="post__actions">
+            <button
+              class="like"
+              type="button"
+              aria-pressed="false"
+              aria-label="Curtir"
+              data-action="like"
+            >
+              <svg class="icon" aria-hidden="true"><use href="#i-heart" /></svg>
+            </button>
+            <p data-post-likes></p>
+            <p class="muted small" data-post-credit></p>
+          </footer>
+        </div>
+      </article>
+    </dialog>
+
+    <!-- Templates -->
+    <template id="tpl-highlight">
+      <button class="highlight" type="button">
+        <span class="highlight__ring"><img alt="" width="84" height="84" loading="lazy" /></span>
+        <span class="highlight__label"></span>
+      </button>
+    </template>
+
+    <template id="tpl-section">
+      <section class="category">
+        <header class="category__head">
+          <img class="category__thumb" alt="" width="44" height="44" loading="lazy" />
+          <div>
+            <h3 class="category__title"></h3>
+            <p class="category__desc"></p>
+          </div>
+        </header>
+        <div class="grid"></div>
+        <p class="liked-by">
+          Curtido por <strong>evyn018</strong> e <strong>outras pessoas</strong>
+        </p>
+      </section>
+    </template>
+
+    <template id="tpl-tile">
+      <button class="tile" type="button">
+        <img alt="" width="600" height="750" loading="lazy" decoding="async" />
+        <span class="tile__overlay" aria-hidden="true">
+          <svg class="icon" aria-hidden="true"><use href="#i-heart" /></svg>
+          <span class="tile__count"></span>
+        </span>
+      </button>
+    </template>
+
+    <template id="tpl-song">
+      <li>
+        <a class="song" target="_blank" rel="noopener noreferrer">
+          <img class="song__cover" alt="" width="48" height="48" loading="lazy" />
+          <span class="song__meta"><strong></strong><small></small></span>
+          <span class="song__play">
+            <svg class="icon" aria-hidden="true"><use href="#i-play" /></svg> Ouvir
+          </span>
+        </a>
+      </li>
+    </template>
+
+    <noscript>
+      <p class="noscript">Ative o JavaScript para ver as curtidas da Eve.</p>
+    </noscript>
+  </body>
+</html>
