@@ -379,7 +379,15 @@ function renderSparkles(root) {
 }
 
 /* ---------- Bootstrap ---------- */
+/** Ao recarregar, sempre começa no topo: sem restaurar a rolagem anterior nem pular para um #hash. */
+function resetScroll() {
+  if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+  if (location.hash) history.replaceState(null, "", location.pathname + location.search);
+  window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+}
+
 function init() {
+  resetScroll();
   document.querySelectorAll("img[data-image]").forEach((img) => {
     setImage(withFallback(img), img.dataset.image, img.dataset.sizes ?? SIZES.thumb);
   });
