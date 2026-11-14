@@ -1,10 +1,12 @@
-import { CATEGORIES, EXTRA_CREDITS, POSTS, SONGS } from "./data.js";
+import { CATEGORIES, EXTRA_CREDITS, POSTS, SONGS } from "./data.js?v=2";
 
 const IMG_BASE = "assets/img/";
+// Muda a URL das imagens para invalidar cópias antigas guardadas no navegador.
+const ASSET_VERSION = "2";
 const STORAGE_KEY = "eve-likes";
 const BASE_LIKES = 878;
 
-const imgSrc = (id) => `${IMG_BASE}${id}.jpg`;
+const imgSrc = (id) => `${IMG_BASE}${id}.jpg?v=${ASSET_VERSION}`;
 const postsOf = (catId) => POSTS.filter((p) => p.id.startsWith(`${catId}-`));
 const categoryOf = (postId) => CATEGORIES.find((c) => postId.startsWith(`${c.id}-`));
 

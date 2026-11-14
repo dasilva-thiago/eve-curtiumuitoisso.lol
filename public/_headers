@@ -6,17 +6,7 @@
   Permissions-Policy: camera=(), microphone=(), geolocation=()
   Cross-Origin-Opener-Policy: same-origin
 
-/
-  Cache-Control: public, max-age=0, must-revalidate
-
-/assets/css/*
-  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
-
-/assets/js/*
-  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
-
-/assets/img/*
-  Cache-Control: public, max-age=2592000, stale-while-revalidate=604800
-
-/favicon.svg
-  Cache-Control: public, max-age=2592000
+# Cache: sem regras próprias de propósito. O padrão do Cloudflare
+# (max-age=0, must-revalidate + ETag) faz o navegador revalidar sempre e
+# receber 304 quando nada mudou, então trocar um arquivo com o mesmo nome
+# aparece na hora.
