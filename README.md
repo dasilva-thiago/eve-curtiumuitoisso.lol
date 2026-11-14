@@ -1,42 +1,43 @@
-# eve-curtiumuitoisso.lol
+# Eve curtiu isso!
 
-Site estático "Eve curtiu isso!", hospedado no **Cloudflare Workers (Static Assets)**.
-Não tem build: o que está em `public/` é o que vai para o ar.
+_…talvez vc curta também._
 
-## Estrutura
+**[eve-curtiumuitoisso.lol](https://eve-curtiumuitoisso.lol)**
 
-```
-public/                 # raiz publicada
-  index.html            # marcação + <template>s + sprite de ícones SVG
-  404.html
-  _headers              # CSP, headers de segurança, cache
-  robots.txt, favicon.svg
-  assets/
-    css/main.css        # tokens + componentes (BEM)
-    js/data.js          # CONTEÚDO: categorias, legendas, playlist
-    js/main.js          # renderização e interações (ES module)
-    img/                # <categoria>-<n>.jpg + CREDITS.md
-wrangler.jsonc          # config do Cloudflare
-```
+Um presente de brincadeira em forma de site: um perfil no estilo Instagram onde tudo o que aparece é algo que a Eve curtiu. São as obsessões, os lugares e as músicas dela, reunidos como se fossem o feed oficial do seu bom gosto.
 
-## Editar conteúdo
+## O conceito
 
-- Textos, legendas e playlist ficam em `public/assets/js/data.js`.
-- Para trocar uma foto, substitua `public/assets/img/<id>.jpg` (JPEG com ~900px de largura) e atualize o `credit`.
-- A foto de perfil fica em `public/assets/img/eve-avatar.jpg` (320×320).
+A ideia parte de uma notificação que todo mundo conhece: _"fulano curtiu isso"_. Aqui ela vira título e curadoria. A página imita a estrutura de um perfil, com foto, bio, destaques, abas e grade de posts, mas cada post é uma das coisas que a Eve ama. O tom é de quem mostra um feed de amiga, com legendas informais e um pouco de autodeboche.
 
-## Desenvolvimento
+O que tem no feed:
 
-```bash
-npm install
-npm run dev      # http://localhost:8787
-npm run check    # eslint + prettier
-```
+- **BTS**
+- **Cafés caros e chiques**
+- **Chocolates**
+- **Elis Regina**
+- **Doramas**
+- **MPB**
+- **São Paulo**
+- **Rolês**: Buenos Aires e Colonia del Sacramento
 
-## Deploy
+## Na página
 
-1. Adicione o domínio `eve-curtiumuitoisso.lol` como zona na sua conta Cloudflare e aponte os nameservers no registrador.
-2. Rode `npx wrangler login` e depois `npm run deploy`. A rota `custom_domain` em `wrangler.jsonc` cria o DNS e o certificado sozinha.
-3. (Opcional) Para o `www`, crie uma _Redirect Rule_ no painel: `www.eve-curtiumuitoisso.lol/*` → `https://eve-curtiumuitoisso.lol/${1}` (301).
+- **Destaques** em formato de story, um para cada categoria, que levam direto à seção.
+- **Posts** que abrem em tela cheia, com legenda, crédito da foto e curtida com dois cliques, como no app.
+- **Curtir tudo**, para quem concorda com o gosto dela de uma vez.
+- **Trilha sonora**: uma playlist com Elis, BTS, Tom Jobim, Gal, Cazuza, Rita Lee, Fito Páez, MF DOOM e outros.
+- **Mensagens**: uma DM inesperada de alguém importante.
+- **Modo claro e escuro**, em tons de café: latte de dia, espresso à noite.
 
-Também dá para fazer deploy contínuo: em Workers & Pages → _Import a repository_, conecte este repo com o comando de deploy `npx wrangler deploy`.
+## Feito com
+
+HTML, CSS e JavaScript sem framework, empacotados com [Vite](https://vite.dev) e publicados no [Cloudflare Workers](https://developers.cloudflare.com/workers/static-assets/). As fotos são servidas em WebP responsivo.
+
+## Créditos das imagens
+
+As fotos vêm do [Wikimedia Commons](https://commons.wikimedia.org) e do [Flickr](https://www.flickr.com), sob licenças Creative Commons ou em domínio público. Autoria e licença de cada uma estão em [`images/CREDITS.md`](images/CREDITS.md) e no rodapé do site. Os direitos das imagens continuam com seus autores.
+
+---
+
+Feito com carinho por [@dasilva-thiago](https://github.com/dasilva-thiago), para a Eve.

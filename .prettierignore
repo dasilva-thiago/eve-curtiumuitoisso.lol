@@ -1,3 +1,7 @@
 node_modules
 .wrangler
-public/assets/img
+dist
+images
+src/assets/img
+originals
+package-lock.json

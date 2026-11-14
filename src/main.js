@@ -1,12 +1,10 @@
-import { CATEGORIES, EXTRA_CREDITS, POSTS, SONGS } from "./data.js?v=2";
+import "./styles/main.css";
+import { CATEGORIES, EXTRA_CREDITS, POSTS, SONGS } from "./data.js";
+import { SIZES, setImage } from "./images.js";
 
-const IMG_BASE = "assets/img/";
-// Muda a URL das imagens para invalidar cópias antigas guardadas no navegador.
-const ASSET_VERSION = "2";
 const STORAGE_KEY = "eve-likes";
 const BASE_LIKES = 878;
 
-const imgSrc = (id) => `${IMG_BASE}${id}.jpg?v=${ASSET_VERSION}`;
 const postsOf = (catId) => POSTS.filter((p) => p.id.startsWith(`${catId}-`));
 const categoryOf = (postId) => CATEGORIES.find((c) => postId.startsWith(`${c.id}-`));
 
@@ -59,7 +57,7 @@ function renderHighlights(root) {
     const el = fromTemplate("tpl-highlight");
     el.dataset.category = cat.id;
     el.setAttribute("aria-label", `Ir para ${cat.title}`);
-    withFallback(el.querySelector("img")).src = imgSrc(`${cat.id}-1`);
+    setImage(withFallback(el.querySelector("img")), `${cat.id}-1`, SIZES.highlight);
     el.querySelector(".highlight__label").textContent = cat.label;
     return el;
   });
@@ -71,7 +69,7 @@ function renderFeed(root) {
     const section = fromTemplate("tpl-section");
     section.id = cat.id;
     section.setAttribute("aria-labelledby", `${cat.id}-title`);
-    withFallback(section.querySelector(".category__thumb")).src = imgSrc(`${cat.id}-1`);
+    setImage(withFallback(section.querySelector(".category__thumb")), `${cat.id}-1`, SIZES.thumb);
     const title = section.querySelector(".category__title");
     title.id = `${cat.id}-title`;
     title.textContent = cat.title;
@@ -82,7 +80,7 @@ function renderFeed(root) {
       tile.dataset.postId = post.id;
       tile.setAttribute("aria-label", `Abrir post: ${post.caption}`);
       const img = withFallback(tile.querySelector("img"));
-      img.src = imgSrc(post.id);
+      setImage(img, post.id, SIZES.tile);
       img.alt = post.alt;
       return tile;
     });
@@ -122,7 +120,7 @@ function renderSongs(root) {
     link.setAttribute("aria-label", `Ouvir ${song.title}, de ${song.artist}, no Spotify`);
     const cover = li.querySelector("img");
     if (song.cover) {
-      withFallback(cover).src = imgSrc(song.cover);
+      setImage(withFallback(cover), song.cover, SIZES.cover);
     } else {
       cover.replaceWith(musicCover());
     }
@@ -135,7 +133,7 @@ function renderSongs(root) {
 
 function renderCredits(root) {
   const lines = [
-    ...POSTS.filter((p) => p.credit).map((p) => `${p.id}.jpg — ${p.credit}`),
+    ...POSTS.filter((p) => p.credit).map((p) => `${p.id} — ${p.credit}`),
     ...EXTRA_CREDITS,
   ];
   root.replaceChildren(
@@ -183,9 +181,9 @@ function initModal(dialog) {
     const post = POSTS[index];
     const cat = categoryOf(post.id);
     img.classList.remove("is-broken");
-    img.src = imgSrc(post.id);
+    setImage(img, post.id, SIZES.post);
     img.alt = post.alt;
-    thumb.src = imgSrc(`${cat.id}-1`);
+    setImage(thumb, `${cat.id}-1`, SIZES.thumb);
     q("[data-post-cat]").textContent = cat.title;
     q("[data-post-caption]").textContent = post.caption;
     q("[data-post-credit]").textContent = post.credit ? `Foto: ${post.credit}` : "";
@@ -343,6 +341,9 @@ function renderSparkles(root) {
 
 /* ---------- Bootstrap ---------- */
 function init() {
+  document.querySelectorAll("img[data-image]").forEach((img) => {
+    setImage(withFallback(img), img.dataset.image, img.dataset.sizes ?? SIZES.thumb);
+  });
   renderHighlights(document.querySelector("[data-highlights]"));
   renderFeed(document.querySelector("[data-feed]"));
   renderSongs(document.querySelector("[data-songs]"));

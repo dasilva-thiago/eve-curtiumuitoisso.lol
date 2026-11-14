@@ -153,4 +153,4 @@ vite.config.ts.timestamp-*
 .dev.vars*
 
 # Foto original em alta (o site usa eve-avatar.jpg)
-public/assets/img/eve.jpg
+originals/

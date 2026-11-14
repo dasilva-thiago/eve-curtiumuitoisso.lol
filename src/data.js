@@ -214,13 +214,13 @@ export const POSTS = [
 
 /** Créditos de imagens que não são posts. */
 export const EXTRA_CREDITS = [
-  "suga-avatar.jpg — Dispatch — CC BY 3.0",
-  "song-mf-doom.jpg — Possan — CC BY-SA 3.0",
-  "song-tom-jobim.jpg — Autor desconhecido — Domínio público",
-  "song-cazuza.jpg — Autor desconhecido — Domínio público",
-  "song-arthur-verocai.jpg — brun-o (Flickr) — CC BY-NC-SA 2.0",
-  "song-rita-lee.jpg — CaioWebb — CC BY 2.0",
-  "song-fito-paez.jpg — Ministerio de Cultura de la Nación — CC BY-SA 2.0",
+  "suga-avatar — Dispatch — CC BY 3.0",
+  "song-mf-doom — Possan — CC BY-SA 3.0",
+  "song-tom-jobim — Autor desconhecido — Domínio público",
+  "song-cazuza — Autor desconhecido — Domínio público",
+  "song-arthur-verocai — brun-o (Flickr) — CC BY-NC-SA 2.0",
+  "song-rita-lee — CaioWebb — CC BY 2.0",
+  "song-fito-paez — Ministerio de Cultura de la Nación — CC BY-SA 2.0",
 ];
 
 /** Links abrem a busca do Spotify (sem IDs fixos que podem quebrar). @type {Song[]} */

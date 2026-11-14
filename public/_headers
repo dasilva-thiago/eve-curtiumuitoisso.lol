@@ -8,7 +8,9 @@
   Cross-Origin-Resource-Policy: same-site
   X-Robots-Tag: noindex, nofollow, noarchive, noimageindex
 
-# Cache: sem regras próprias de propósito. O padrão do Cloudflare
-# (max-age=0, must-revalidate + ETag) faz o navegador revalidar sempre e
-# receber 304 quando nada mudou, então trocar um arquivo com o mesmo nome
-# aparece na hora.
+# Cache
+# - /assets/* sai do build do Vite com hash no nome: pode ficar em cache para sempre.
+# - O resto (HTML, theme-init.js, favicon, og.jpg) usa o padrão do Cloudflare
+#   (max-age=0, must-revalidate + ETag): sempre revalida e recebe 304 quando nada mudou.
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
