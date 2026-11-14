@@ -324,6 +324,10 @@ img.is-broken {
   font-size: 15px;
 }
 
+[data-egg] {
+  cursor: pointer;
+}
+
 .bio {
   margin: 0;
   color: var(--text-2);
