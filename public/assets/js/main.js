@@ -265,6 +265,49 @@ function burstHearts(count = 24) {
   }
 }
 
+/* ---------- Tema claro/escuro ---------- */
+const THEME_KEY = "eve-theme";
+const THEME_COLORS = { light: "#f4ece1", dark: "#16110d" };
+
+function initTheme(button) {
+  const root = document.documentElement;
+  const systemDark = window.matchMedia("(prefers-color-scheme: dark)");
+
+  const storedTheme = () => {
+    try {
+      const value = localStorage.getItem(THEME_KEY);
+      return value === "light" || value === "dark" ? value : null;
+    } catch {
+      return null;
+    }
+  };
+
+  const apply = (theme) => {
+    root.dataset.theme = theme;
+    document
+      .querySelector('meta[name="theme-color"]')
+      ?.setAttribute("content", THEME_COLORS[theme]);
+    button.setAttribute("aria-pressed", String(theme === "dark"));
+  };
+
+  apply(storedTheme() ?? (systemDark.matches ? "dark" : "light"));
+
+  button.addEventListener("click", () => {
+    const next = root.dataset.theme === "dark" ? "light" : "dark";
+    try {
+      localStorage.setItem(THEME_KEY, next);
+    } catch {
+      /* sem persistência: vale só nesta visita */
+    }
+    apply(next);
+  });
+
+  // Sem escolha salva, acompanha o sistema em tempo real.
+  systemDark.addEventListener("change", (e) => {
+    if (!storedTheme()) apply(e.matches ? "dark" : "light");
+  });
+}
+
 /* ---------- Brilhos de fundo ---------- */
 const SPARKLE_TONES = ["#d39a4a", "#c8893f", "#e2b878", "#b5503c"];
 const random = (min, max) => min + Math.random() * (max - min);
@@ -306,6 +349,7 @@ function init() {
   renderCredits(document.querySelector("[data-credits]"));
   document.querySelector("[data-post-count]").textContent = String(POSTS.length);
   renderSparkles(document.querySelector("[data-sparkles]"));
+  initTheme(document.querySelector("[data-theme-toggle]"));
 
   const selectTab = initTabs();
   const modal = initModal(document.querySelector("[data-modal]"));
