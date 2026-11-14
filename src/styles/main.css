@@ -1175,22 +1175,76 @@ img.is-broken {
    Responsive
    ========================================================= */
 @media (max-width: 735px) {
+  /* Perfil no layout do app: avatar à esquerda, nome e números ao lado;
+     nome de exibição e bio embaixo, na largura toda. */
   .profile {
-    gap: 8px 20px;
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+      "avatar name"
+      "avatar stats"
+      "handle handle"
+      "bio bio"
+      "actions actions";
+    gap: 6px 24px;
+  }
+
+  .profile__info {
+    display: contents;
+  }
+
+  .profile__avatar {
+    grid-area: avatar;
   }
 
   .avatar-ring {
-    --size: 88px;
+    --size: 86px;
     --pad: 3px;
   }
 
+  .profile__name {
+    grid-area: name;
+    align-self: end;
+    margin-top: 24px; /* alinha com o anel, abaixo da nota */
+  }
+
   .profile__name h2 {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .stats {
-    gap: 14px;
-    font-size: 14px;
+    grid-area: stats;
+    align-self: start;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: start;
+    gap: 22px;
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.25;
+  }
+
+  .stats li {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .stats strong {
+    font-size: 16px;
+  }
+
+  .profile__handle {
+    grid-area: handle;
+    margin: 10px 0 0;
+    font-weight: 600;
+  }
+
+  .bio {
+    grid-area: bio;
+  }
+
+  .profile__actions {
+    grid-area: actions;
+    margin-top: 10px;
   }
 
   .highlights {
