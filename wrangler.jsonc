@@ -9,7 +9,10 @@
     "not_found_handling": "404-page",
     "html_handling": "auto-trailing-slash",
   },
-  "routes": [{ "pattern": "eve-curtiumuitoisso.lol", "custom_domain": true }],
+  "routes": [
+    { "pattern": "eve-curtiumuitoisso.lol", "custom_domain": true },
+    { "pattern": "www.eve-curtiumuitoisso.lol", "custom_domain": true },
+  ],
   "workers_dev": true,
   "observability": { "enabled": false },
 }
