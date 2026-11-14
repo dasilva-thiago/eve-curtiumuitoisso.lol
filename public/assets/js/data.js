@@ -206,9 +206,9 @@ export const POSTS = [
   },
   {
     id: "role-3",
-    caption: "Montevidéu na calma, bora?",
-    alt: "Rua da Ciudad Vieja em Montevidéu",
-    credit: "JacobinoWunsh — CC BY-SA 4.0",
+    caption: "Colonia del Sacramento, onde até a rua tem charme",
+    alt: "Rua de pedra no Barrio Histórico de Colonia del Sacramento, descendo até o rio",
+    credit: "Javier Vidal — CC BY 2.0",
   },
 ];
 

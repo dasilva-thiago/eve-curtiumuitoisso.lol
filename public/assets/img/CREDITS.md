@@ -25,7 +25,7 @@
 | sp-3.jpg | Ibirapuera Park | Wilfredor | CC0 | https://commons.wikimedia.org/wiki/File:Ibirapuera_Park_in_S%C3%A3o_Paulo_2.jpg |
 | role-1.jpg | Caminito, La Boca, Buenos Aires | Luis Argerich | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Caminito_Farolito.jpg |
 | role-2.jpg | Puente de la Mujer, Puerto Madero | Mariordo (Mario Roberto Durán Ortiz) | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Puente_de_la_Mujer_BsAs_09.jpg |
-| role-3.jpg | Street in Ciudad Vieja, Montevideo | JacobinoWunsh | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Calle_sobre_la_Ciudad_Vieja_de_Montevideo.jpg |
+| role-3.jpg | Barrio Histórico de Colonia del Sacramento | Javier Vidal | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Colonia_del_Sacramento_1014.jpg |
 | suga-avatar.jpg | Suga (Min Yoon-gi), maio de 2018 — recorte | Dispatch | CC BY 3.0 | https://commons.wikimedia.org/wiki/File:Min_Yoon-gi_May_2018.jpg |
 | song-mf-doom.jpg | MF DOOM, Hultsfred 2011 — recorte | Possan | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:MF_Doom_-_Hultsfred_2011_(cropped).jpg |
 | song-tom-jobim.jpg | Tom Jobim — recorte | Autor desconhecido | Domínio público | https://commons.wikimedia.org/wiki/File:Ant%C3%B4nio_Carlos_Jobim_(cropped).jpg |
