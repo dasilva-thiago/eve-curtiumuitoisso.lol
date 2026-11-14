@@ -47,7 +47,7 @@ export const CATEGORIES = [
     label: "MPB",
     title: "MPB",
     description:
-      "Caetano, Gil, Gal, Chico. A MPB acompanha a semana inteira, inclusive nos stories.",
+      "Cazuza, Gil, Gal, Chico. A MPB acompanha a semana inteira, inclusive nos stories.",
   },
   {
     id: "sp",
@@ -158,9 +158,9 @@ export const POSTS = [
   },
   {
     id: "mpb-1",
-    caption: "Caetano, minha alma gêmea musical",
-    alt: "Caetano Veloso",
-    credit: "Cilo Roberto Bonaparte — CC BY-SA 2.0",
+    caption: "Cazuza no volume máximo, sem pedir desculpa",
+    alt: "Cazuza cantando em show, em 1987",
+    credit: "Autor desconhecido — Domínio público",
   },
   {
     id: "mpb-2",

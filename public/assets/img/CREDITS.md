@@ -17,7 +17,7 @@
 | dorama-1.jpg | Bukchon Hanok Village at blue hour, Seoul | Basile Morin | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Bukchon-ro_11-gil_street_with_hanok_houses_at_blue_hour_in_Bukchon_Hanok_Village_Seoul.jpg |
 | dorama-2.jpg | N Seoul Tower | Eugene Lim from Hong Kong | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:N_Seoul_Tower_(13952097192).jpg |
 | dorama-3.jpg | Seokchon Lake cherry blossoms, Seoul | Ox1997cow | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Seokchon_Lake_Cherry_Blossoms_2020.jpg |
-| mpb-1.jpg | Caetano Veloso | Cilo Roberto Bonaparte | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File:Caetano_Veloso_(3595177472).jpg |
+| mpb-1.jpg | Cazuza em 1987 | Autor desconhecido | Domínio público | https://commons.wikimedia.org/wiki/File:Cazuza_em_1987.jpg |
 | mpb-2.jpg | Gilberto Gil, 2012 | simenon | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File:Gilberto_Gil_2012.jpg |
 | mpb-3.jpg | Gal Costa, 2018 | Teca Lamboglia | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Gal_Costa_Tom_Brasil_(45246823335).jpg |
 | sp-1.jpg | MASP, Avenida Paulista | Wilfredor | CC0 | https://commons.wikimedia.org/wiki/File:MASP_Brazil.jpg |
