@@ -116,7 +116,7 @@ export const POSTS = [
   },
   {
     id: "chocolate-3",
-    caption: "dieta começa segunda (de novo)",
+    caption: "um bombom por dia (ou cinco)",
     alt: "Pralinés finos numa confeitaria",
     credit: "Marek Ślusarczyk — CC BY 3.0",
   },
