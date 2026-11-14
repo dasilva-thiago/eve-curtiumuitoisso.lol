@@ -215,6 +215,7 @@ export const POSTS = [
 /** Créditos de imagens que não são posts. */
 export const EXTRA_CREDITS = [
   "suga-avatar — Dispatch — CC BY 3.0",
+  "kglw-avatar — Jason Galea — Domínio público",
   "song-mf-doom — Possan — CC BY-SA 3.0",
   "song-tom-jobim — Autor desconhecido — Domínio público",
   "song-cazuza — Autor desconhecido — Domínio público",

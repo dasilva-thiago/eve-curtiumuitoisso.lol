@@ -33,3 +33,4 @@
 | song-arthur-verocai.jpg | Arthur Verocai em show (telão) — recorte | brun-o | CC BY-NC-SA 2.0 | https://www.flickr.com/photos/21405985@N02/5611582738 |
 | song-rita-lee.jpg | Rita Lee em show — recorte | CaioWebb | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Rita_Lee_(cropped).jpg |
 | song-fito-paez.jpg | Fito Páez com a Kashmir Orchestra no CCK — recorte | Ministerio de Cultura de la Nación | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File:Fito_P%C3%A1ez_junto_a_la_Kashmir_Orchestra_en_el_CCK_-_20128109455.jpg |
+| kglw-avatar.jpg | King Gizzard & The Lizard Wizard, foto de divulgação de 2017 — recorte | Jason Galea | Domínio público | https://commons.wikimedia.org/wiki/File:King_Gizzard_%26_The_Lizard_Wizard_2017_Press_Photo_1.jpg |

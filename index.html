@@ -143,7 +143,7 @@
           <ul class="stats">
             <li><strong data-post-count>24</strong> posts</li>
             <li><strong>8</strong> obsessões</li>
-            <li><strong>∞</strong> cafés</li>
+            <li><strong data-egg>∞</strong> cafés</li>
           </ul>
           <p class="bio">
             Curadoria oficial de coisas boas.<br />
@@ -210,6 +210,26 @@
         <ul data-credits></ul>
       </details>
     </footer>
+
+    <!-- Easter egg: 3 cliques no ∞ ou digitar "gizz" -->
+    <div class="toast" role="status" aria-live="polite" hidden data-egg-toast>
+      <img
+        class="toast__avatar"
+        data-image="kglw-avatar"
+        data-sizes="48px"
+        alt=""
+        width="48"
+        height="48"
+        loading="lazy"
+      />
+      <p class="toast__text">
+        <strong>King Gizzard &amp; The Lizard Wizard</strong> curte a página da eve
+      </p>
+      <svg class="icon toast__heart" aria-hidden="true"><use href="#i-heart" /></svg>
+      <button class="toast__close" type="button" aria-label="Fechar" data-egg-close>
+        <svg class="icon" aria-hidden="true"><use href="#i-close" /></svg>
+      </button>
+    </div>
 
     <!-- Mensagem -->
     <button

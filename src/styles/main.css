@@ -1048,6 +1048,92 @@ img.is-broken {
 }
 
 /* =========================================================
+   Easter egg (notificação psicodélica)
+   ========================================================= */
+@property --egg-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.toast {
+  position: fixed;
+  top: var(--gutter);
+  left: 50%;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: min(440px, calc(100vw - 2 * var(--gutter)));
+  padding: 12px 14px;
+  border: 2px solid transparent;
+  border-radius: var(--radius-lg);
+  background:
+    linear-gradient(var(--surface), var(--surface)) padding-box,
+    conic-gradient(from var(--egg-angle), #ff4d6d, #ffb703, #8ac926, #1982c4, #6a4c93, #ff4d6d)
+      border-box;
+  box-shadow: var(--shadow);
+  transform: translateX(-50%);
+  animation:
+    toast-in 0.45s cubic-bezier(0.2, 0.9, 0.3, 1.3),
+    egg-spin 4s linear infinite;
+}
+
+.toast[hidden] {
+  display: none;
+}
+
+.toast__avatar {
+  width: 48px;
+  height: 48px;
+  flex: none;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--surface-2);
+}
+
+.toast__text {
+  flex: 1;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.toast__heart {
+  width: 20px;
+  height: 20px;
+  fill: var(--heart);
+  animation: beat 0.9s ease-in-out infinite;
+}
+
+.toast__close {
+  display: grid;
+  place-items: center;
+  padding: 4px;
+  border: 0;
+  background: none;
+  color: var(--muted);
+}
+
+.toast__close .icon {
+  width: 16px;
+  height: 16px;
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -24px) scale(0.96);
+  }
+}
+
+@keyframes egg-spin {
+  to {
+    --egg-angle: 360deg;
+  }
+}
+
+/* =========================================================
    Brilhos de fundo
    ========================================================= */
 .sparkles {

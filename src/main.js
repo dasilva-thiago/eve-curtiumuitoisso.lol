@@ -263,6 +263,45 @@ function burstHearts(count = 24) {
   }
 }
 
+/* ---------- Easter egg ---------- */
+const EGG_WORD = "gizz";
+const EGG_CLICKS = 3;
+const EGG_WINDOW_MS = 1500;
+const EGG_VISIBLE_MS = 7000;
+
+/** 3 cliques rápidos no "∞" (Nonagon Infinity) ou digitar "gizz" mostram a notificação. */
+function initEasterEgg(trigger, toast) {
+  let hideTimer;
+  let clicks = [];
+  let typed = "";
+
+  const hide = () => {
+    toast.hidden = true;
+  };
+  const show = () => {
+    toast.hidden = false;
+    clearTimeout(hideTimer);
+    hideTimer = setTimeout(hide, EGG_VISIBLE_MS);
+  };
+
+  trigger.addEventListener("click", () => {
+    const now = Date.now();
+    clicks = [...clicks.filter((t) => now - t < EGG_WINDOW_MS), now];
+    if (clicks.length >= EGG_CLICKS) {
+      clicks = [];
+      show();
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key.length !== 1 || e.ctrlKey || e.metaKey || e.altKey) return;
+    typed = (typed + e.key.toLowerCase()).slice(-EGG_WORD.length);
+    if (typed === EGG_WORD) show();
+  });
+
+  toast.querySelector("[data-egg-close]").addEventListener("click", hide);
+}
+
 /* ---------- Tema claro/escuro ---------- */
 const THEME_KEY = "eve-theme";
 const THEME_COLORS = { light: "#f4ece1", dark: "#16110d" };
@@ -351,6 +390,7 @@ function init() {
   document.querySelector("[data-post-count]").textContent = String(POSTS.length);
   renderSparkles(document.querySelector("[data-sparkles]"));
   initTheme(document.querySelector("[data-theme-toggle]"));
+  initEasterEgg(document.querySelector("[data-egg]"), document.querySelector("[data-egg-toast]"));
 
   const selectTab = initTabs();
   const modal = initModal(document.querySelector("[data-modal]"));
